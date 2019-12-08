@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html><head>
+    <title>38광땡</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/image-puzzle.css" rel="stylesheet">
+    <script src="js/image-puzzle.js"></script>
+
+</head>
+<body style="font-family: 'BMEULJIRO';" id="back">
+    <style type="text/css">
+
+        html{cursor: url(back.png), auto;}
+        body{font-family: 'BMEULJIRO', sans-serif;}
+        h1, p{text-align: center; margin-top: 2px; margin-bottom: 0px;}
+        p{font-size: 15px; margin: auto;}
+        li{cursor: url(back.png), auto;}
+        h3{margin: 0; padding-bottom: 15px; padding-top: 10px;}
+        #back{background: url(back.png); background-size: cover; background-attachment: fixed;}
+        #sing{position: absolute; top: 52px; left: 280px; width: 120px; height: auto;}
+
+        #levelPanel{margin: 0; padding-top: 10px; padding-bottom: 10px;}
+        
+    
+        @font-face { font-family: 'BMEULJIRO'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/BMEULJIRO.woff') format('woff'); font-weight: normal; font-style: normal; }
+    </style>
+    <div id="collage">
+        <br><br><br>
+        <br><br>
+        <h1>못 먹어도 GO~!</h1>
+        <h2>100세 시대를 넘어 120세 시대로, 무병장수 할 준비 완료</h2>
+<br><br>
+<h2>치매예방 화투퍼즐 하는 방법</h2>
+<h2><1. 원하는 그림의 퍼즐을 고르세요.></h2>
+        <video width="64%" controls Autoplay=autoplay style="margin: auto; padding-left: 227px;">
+        <source src="ex1.mov" type="video/mp4">
+        </video><br><br><br><br>
+        <h2><2. 고른 후, 마우스로 움직여 그림을 완성하세요.></h2>
+<video width="64%" controls Autoplay=autoplay style="margin: auto; padding-left: 227px;">
+        <source src="ex2.mov" type="video/mp4">
+        </video><br><br><br><br>
+        <div id="playPanel" style="padding: 5px; display: block;">
+        <div id="playPanel" style="padding: 0px; display: block;">
+            <h2 id="imgTitle">5번</h2>
+            <div style="display:inline-block; margin-left:10px ; width:95%; vertical-align:top;">
+                <ul id="sortable" class="sortable"><li id="0" data-value="0" draggable="true" dragstart="true" style="background-image: url(back.png); background-size: 300%; background-position: 0% 0%; width: 133.333px; height: 133.333px; background-color: white;"></li><li id="2" data-value="2" draggable="true" dragstart="true" style="background-image: url(&quot;images/5.png&quot;); background-size: 300%; background-position: 100% 0%; width: 133.333px; height: 133.333px;"></li><li id="3" data-value="3" draggable="true" dragstart="true" style="background-image: url(back.png); background-size: 300%; background-position: 0% 50%; width: 133.333px; height: 133.333px;"></li><li id="8" data-value="8" draggable="true" dragstart="true" style="background-image: url(&quot;images/5.png&quot;); background-size: 300%; background-position: 100% 100%; width: 133.333px; height: 133.333px;"></li><li id="4" data-value="4" draggable="true" dragstart="true" style="background-image: url(&quot;images/5.png&quot;); background-size: 300%; background-position: 50% 50%; width: 133.333px; height: 133.333px;"></li><li id="1" data-value="1" draggable="true" dragstart="true" style="background-image: url(&quot;images/5.png&quot;); background-size: 300%; background-position: 50% 0%; width: 133.333px; height: 133.333px;"></li><li id="5" data-value="5" draggable="true" dragstart="true" style="background-image: url(&quot;images/5.png&quot;); background-size: 300%; background-position: 100% 50%; width: 133.333px; height: 133.333px;"></li><li id="6" data-value="6" draggable="true" dragstart="true" style="background-image: url(&quot;images/5.png&quot;); background-size: 300%; background-position: 0% 100%; width: 133.333px; height: 133.333px;"></li><li id="7" data-value="7" draggable="true" dragstart="true" style="background-image: url(&quot;images/5.png&quot;); background-size: 300%; background-position: 50% 100%; width: 133.333px; height: 133.333px;"></li></ul>
+
+                <div id="actualImageBox">
+                    <div id="stepBox">
+                        <div><h1>누른횟수:</div>
+                        <div id="stepCount" class="stepCount"><h1>0</h1></div>
+                    </div>
+                    <div id="timeBox">
+                        <h1>사용시간: <span id="timerPanel">37</span> 초
+                    </h1></div><br><br>
+                    <img id="actualImage" src="images/5.png">
+                    
+                    <p id="levelPanel">
+                        <input type="radio" name="level" id="easy" checked="checked" value="3" onchange="imagePuzzle.startGame(images, this.value);"> <label for="easy">하급</label>
+                        <input type="radio" name="level" id="medium" value="4" onchange="imagePuzzle.startGame(images, this.value);">                        <label for="medium">중급</label>
+                        <input type="radio" name="level" id="hard" value="5" onchange="imagePuzzle.startGame(images, this.value);">                        <label for="hard">고급</label>
+                    </p>
+                    <br>
+                    <div>
+                        <button id="newPhoto" type="button" class="btn" onclick="restart();">다른 그림 보기</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div id="gameOver" style="display:none;">
+            <div style="background-color: #ffffff; margin-top: 10px; padding: 5px 10px 20px 10px; text-align: center; ">
+                <br><br><br>
+                <h1 style="text-align:center">아싸~ 고도리!
+                <br><br> 움직임 횟수 : <span id="stepCount" class="stepCount">0</span> 번
+                <br> 사용시간 : <span class="timeCount">0</span> 초<br><br>
+                <div>
+                    <button type="button" onclick="window.location.reload(true);">다시하기</button>
+                </div>
+            </h1></div>
+        </div>
+
+        <script>
+            var images = [
+                { src: '1.png', title: '첫 번째 그림' },
+                { src: '2.png', title: '두 번째 그림' },
+                { src: '3.png', title: '세 번째 그림' },
+                { src: '4.png', title: '네 번째 그림' },
+                { src: '5.png', title: '다섯 번째 그림' },
+                { src: '6.png', title: '여섯 번째 그림' },
+                { src: '7.png', title: '일곱 번째 그림' },
+                { src: '8.png', title: '여덟 번째 그림' },
+                { src: '9.png', title: '아홉 번째 그림' },
+                { src: '10.png', title: '열 번째 그림' }
+            ];
+
+            window.onload = function () {
+                var gridSize = document.querySelector('#levelPanel input[type="radio"]:checked').getAttribute('value');
+                imagePuzzle.startGame(images, gridSize);
+            };
+            function restart() {
+                var gridSize = document.querySelector('#levelPanel input[type="radio"]:checked').getAttribute('value');
+                imagePuzzle.startGame(images, gridSize);
+            }
+         
+        </script>
+    </div>
+
+</body></html>
